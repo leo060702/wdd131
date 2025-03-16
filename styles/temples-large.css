@@ -1,0 +1,28 @@
+@media screen and (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        background-color: #222;
+    }
+
+    nav ul li {
+        padding: 15px 20px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .gallery figure {
+        background: white;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+}
