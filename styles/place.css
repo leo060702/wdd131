@@ -1,10 +1,13 @@
 :root {
-  --main-color: #de2910; /* China red */
-  --accent-color: #ffde00; /* Yellow (like the flag stars) */
+  --main-color: #de2910;
+  --accent-color: #ffde00;
+  --font-family-main: 'Roboto', sans-serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: var(--font-family-main);
+  background-color: #fff;
+  color: #222;
   margin: 0;
   padding: 0;
 }
