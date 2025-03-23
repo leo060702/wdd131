@@ -1,5 +1,5 @@
-const temp = 45; // °F
-const windSpeed = 5; // mph
+const temp = 68; // °F
+const windSpeed = 3; // mph
 
 function calculateWindChill(tempF, speedMph) {
   return (
