@@ -1,0 +1,53 @@
+:root {
+  --main-color: #de2910; /* China red */
+  --accent-color: #ffde00; /* Yellow (like the flag stars) */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--main-color);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.info, .weather {
+  padding: 1rem;
+}
+
+.weather-icon::after {
+  content: "⛅";
+  margin-left: 0.5rem;
+}
+
+footer {
+  background-color: #eee;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive styling */
+@media (min-width: 768px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .hero {
+    grid-column: span 2;
+  }
+}
