@@ -1,42 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Zhili Zhong - Personal homepage with CSS and JavaScript.">
-  <meta name="author" content="Zhili Zhong">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Zhili Zhong - Personal homepage with CSS and JavaScript." />
+  <meta name="author" content="Zhili Zhong" />
   <title>WDD 131 – Dynamic Web Fundamentals - Zhili Zhong</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Open+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/base.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/base.css" />
   <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
   <header>
-    <h1>WDD 131: Dynamic Web Fundamentals</h1>
+    <h1>WDD 131: Dynamic Web Fundamentals - Zhili Zhong</h1>
     <nav>
-      <a href="https://www.linkedin.com">LinkedIn</a>
-      <a href="https://byupw.instructure.com/">Canvas</a>
-      <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Scripture</a>
-      <a href="#">Final Project</a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="www.linkedin.com/in/zhili-zhong-379021353" target="_blank">LinkIn Profile page</a></li>
+        <li><a href="https://byupw.instructure.com/" target="_blank">I-Learn</a></li>
+        <li><a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Favorite Scripture</a></li>
+        <li><a href="#">Final Project</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="card">
+  <main class="grid">
+    <section class="card about">
       <h2>About Me</h2>
-      <img src="images/card1.jpg" alt="A personal photo">
-      <p>Hello! I'm Zhili Zhong, currently studying Dynamic Web Fundamentals. This page is my course homepage built with HTML, CSS, and JavaScript.</p>
-    </section>
+      <div class="info">
+        <p>Hi! My name is Zhili Zhong. I’m an undergraduate student currently studying Software Development through BYU Pathway and Computer Science at Saddleback College. I'm passionate about learning how technology shapes the world and hope to build meaningful applications in the future.</p>
+        <img src="images/profile.jpg" alt="Zhili Zhong" width="200" />
+      </div>
+   <h3>Hacienda Heights, California</h3>
+  <div class="location">
+    <img src="images/map.png" alt="Map showing Hacienda Heights, California" />
+    <p>I moved to California from China and now live in Hacienda Heights. I enjoy exploring local parks, attending institute classes, and participating in Sunday church activities with friends in the area.</p>
+  </div>
+</section>
 
-    <section class="card">
-      <h2>Favorite Place</h2>
-      <img src="images/card2.jpg" alt="A beautiful landscape">
-      <p>I love visiting the mountains and enjoying nature. Being outside helps me relax and recharge.</p>
+    <section class="card resources">
+      <h2>Web Dev Resources</h2>
+      <p>Open these resources in a new window</p>
+      <ul>
+        <li><a href="https://validator.w3.org/" target="_blank">HTML Checker Website</a></li>
+        <li><a href="https://jigsaw.w3.org/css-validator/" target="_blank">CSS Checker Website</a></li>
+        <li><a href="https://www.w3schools.com/html/" target="_blank">W3 School: HTML Basics</a></li>
+        <li><a href="https://www.youtube.com/watch?v=fYq5PXgSsbE" target="_blank">Flex Box Video Tutorial</a></li>
+        <li><a href="https://flexboxfroggy.com/" target="_blank">Flexbox Froggy</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_and_flexbox" target="_blank">How to Use CSS Flexbox Inside CSS Grid</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius" target="_blank">CSS Rounded Corners</a></li>
+      </ul>
     </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="currentyear"></span> Zhili Zhong, California, USA</p>
+    <p>&copy; <span id="currentyear"></span> | Zhili Zhong | Utah, USA</p>
     <p id="lastModified"></p>
   </footer>
 </body>
