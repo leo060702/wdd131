@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filtered Temples</title>
+  <link rel="stylesheet" href="filtered-temples.css" />
+</head>
+<body>
+  <header>
+    <h1>Temples of The Church of Jesus Christ</h1>
+    <nav>
+      <button onclick="filterTemples('all')">Home</button>
+      <button onclick="filterTemples('old')">Old</button>
+      <button onclick="filterTemples('new')">New</button>
+      <button onclick="filterTemples('large')">Large</button>
+      <button onclick="filterTemples('small')">Small</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="temples-container"></section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> | Last modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="filtered-temples.js"></script>
+</body>
+</html>
