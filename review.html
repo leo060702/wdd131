@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Zhili Zhong" />
+  <meta name="description" content="Thank you page for product review submission." />
+  <title>Review Submitted</title>
+  <link rel="stylesheet" href="styles/form.css" />
+  <script defer>
+    const counter = localStorage.getItem('reviewCount') || 0;
+    localStorage.setItem('reviewCount', Number(counter) + 1);
+    window.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('count').textContent = localStorage.getItem('reviewCount');
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Thank You!</h1>
+  </header>
+
+<main>
+  <p>Your review has been submitted successfully.</p>
+  <p>Total reviews submitted from your browser: <strong id="count"></strong></p>
+  <div class="center-link">
+    <a href="form.html">Submit Another Review</a>
+  </div>
+</main>
+
+  <footer>
+    <p>&copy;2025 Zhili Zhong<br>
+    Last Modification: <span id="lastModified"></span></p>
+  </footer>
+
+  <script>
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>
