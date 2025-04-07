@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Review Submitted</title>
+  <script defer>
+    const counter = localStorage.getItem('reviewCount') || 0;
+    localStorage.setItem('reviewCount', Number(counter) + 1);
+    window.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('count').textContent = localStorage.getItem('reviewCount');
+    });
+  </script>
+</head>
+<body>
+  <main>
+    <h1>Thank you for your review!</h1>
+    <p>Total reviews submitted from your browser: <strong id="count"></strong></p>
+    <a href="form.html">Submit another review</a>
+  </main>
+  <footer>
+    <p>&copy; Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+</body>
+</html>
