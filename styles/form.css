@@ -90,4 +90,18 @@ footer {
   padding: 1rem;
   font-size: 0.9rem;
   margin-top: 2rem;
+.center-link {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.center-link a {
+  display: inline-block;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #330099;
+}
+
+.center-link a:hover {
+  text-decoration: underline;
 }
