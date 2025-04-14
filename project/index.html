@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yosemite 国家公路旅行指南</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Yosemite 国家公路旅行指南</h1>
+    <nav>
+      <ul>
+        <li>首页</li>
+        <li>行程与景点</li>
+        <li>计划你的行程</li>
+        <li>联系我们</li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h2>开启你的优胜美地探险之旅</h2>
+    <p>探索自然之美，感受旅途的精彩。</p >
+    开始规划
+  </section>
+
+  <section id="itinerary">
+    <h2>行程与景点</h2>
+    <p>在这里添加你的行程安排和景点介绍。</p >
+    <!-- 示例图片 -->
+    < img src="images/yosemite1.jpg" alt="优胜美地景点1" loading="lazy">
+    < img src="images/yosemite2.jpg" alt="优胜美地景点2" loading="lazy">
+  </section>
+
+  <section id="plan">
+    <h2>计划你的行程</h2>
+    <form id="budget-form">
+      <label for="distance">行驶距离（公里）：</label>
+      <input type="number" id="distance" name="distance" required>
+      <label for="fuel">油价（每升）：</label>
+      <input type="number" id="fuel" name="fuel" required>
+      <button type="submit">计算油费</button>
+    </form>
+    <p id="fuel-cost"></p >
+  </section>
+
+  <section id="contact">
+    <h2>联系我们</h2>
+    <p>填写联系信息或表单。</p >
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Yosemite 国家公路旅行指南</p >
+    参考来源
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
