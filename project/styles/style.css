@@ -158,3 +158,28 @@ footer a {
     font-weight: bold;
     color: #333;
 }
+.campground-map {
+    margin-top: 3rem;
+}
+
+.campground-map h2 {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+.campground-map p {
+    max-width: 800px;
+    margin: 0 auto 1.5rem auto;
+    line-height: 1.6;
+}
+
+.campground-map img.map-image {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
