@@ -218,4 +218,21 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #45a049;
 }
-
+/* 美化餐饮照片 */
+.food-photo {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top: 1rem;
+}
+.map-image-small {
+    max-width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
