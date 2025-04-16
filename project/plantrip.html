@@ -5,6 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plan Your Trip - Yosemite Road Trip Guide</title>
     <link rel="stylesheet" href="styles/style.css">
+    <style>
+        .trip-planner {
+            margin-top: 3rem;
+            padding: 2rem;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .trip-planner h2 {
+            color: #4CAF50;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .selector {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        select {
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .plan-box {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 6px;
+            display: none;
+        }
+
+        .plan-box.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .plan-box ul {
+            padding-left: 1.2rem;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -33,7 +85,10 @@
             </p>
             <ul>
                 <li><strong>The Ahwahnee Bar:</strong> Indoor and outdoor seating available year-round for drinks, hot cocoa, and snacks.</li>
-                <li><strong>Curry Village Pizza Patio & Bar:</strong> Offers pizza, salads, and drinks for lunch and dinner. Open seasonally with outdoor seating.</li>
+                <li>
+                    <strong>Curry Village Pizza Patio & Bar:</strong> Offers pizza, salads, and drinks for lunch and dinner. Open seasonally with outdoor seating.<br><br>
+                    <img src="images/curry-village.jpg" alt="Curry Village Pizza Patio" class="food-photo">
+                </li>
             </ul>
         </section>
 
@@ -48,11 +103,70 @@
             </ul>
         </section>
 
-<section class="campground-map">
-    <h2>Yosemite Campgrounds Map</h2>
-    <p>This map shows major campgrounds throughout Yosemite National Park. Note that many are open seasonally, and some roads may be closed from November through May due to snow.</p>
-    <img src="images/yosemite-campgrounds.png" alt="Map of Yosemite Campgrounds" class="map-image">
-</section>
+        <section class="trip-planner">
+            <h2>Trip Duration Recommendations</h2>
+            <div class="selector">
+                <label for="daySelect">Select your trip duration:</label>
+                <select id="daySelect" onchange="showPlan()">
+                    <option value="">-- Choose Days --</option>
+                    <option value="1">1 Day</option>
+                    <option value="2">2 Days</option>
+                    <option value="3">3 Days</option>
+                    <option value="4">4-5 Days</option>
+                </select>
+            </div>
+
+            <div id="plan1" class="plan-box">
+                <h3>1-Day Highlights Tour</h3>
+                <p><strong>Highlights:</strong> Focus on Yosemite Valley's iconic sights. Yosemite Falls, El Capitan, and Half Dome.</p>
+                <p><strong>Itinerary:</strong><br>
+                    Morning: Tunnel View panoramic photo stop.<br>
+                    Late Morning: Bridalveil Fall & Yosemite Falls base walk.<br>
+                    Afternoon: Picnic, riverside walk, or visit the Visitor Center.<br>
+                    Consider a guided day tour to maximize sightseeing.</p>
+                <p><strong>Note:</strong> Tight schedule. Plan transportation and timing carefully.</p>
+            </div>
+
+            <div id="plan2" class="plan-box">
+                <h3>2-Day In-Depth Experience</h3>
+                <p><strong>Highlights:</strong> Extend the 1-day tour and explore deeper into the park.</p>
+                <p><strong>Itinerary:</strong><br>
+                    Day 1: Same as 1-day trip.<br>
+                    Day 2: Visit Mariposa Grove of Giant Sequoias, hike to Mirror Lake.<br>
+                    Optional stargazing in Yosemite Valley at night.</p>
+                <p><strong>Note:</strong> Book lodging or campground early.</p>
+            </div>
+
+            <div id="plan3" class="plan-box">
+                <h3>3-Day Nature Discovery</h3>
+                <p><strong>Highlights:</strong> Go deeper into Yosemite’s natural wonders with moderate hikes.</p>
+                <p><strong>Itinerary:</strong><br>
+                    Days 1-2: Follow the 2-day plan.<br>
+                    Day 3: Hike to Vernal & Nevada Falls via Mist Trail or explore Hetch Hetchy Reservoir.</p>
+                <p><strong>Note:</strong> Bring water, food, and hiking safety gear.</p>
+            </div>
+
+            <div id="plan4" class="plan-box">
+                <h3>4-5 Day Outdoor Adventure</h3>
+                <p><strong>Highlights:</strong> Extend exploration with hiking, climbing, or rafting activities.</p>
+                <p><strong>Itinerary:</strong><br>
+                    Build upon the 3-day plan with optional:<br>
+                    - Half Dome hike (permit required)<br>
+                    - Rafting on Merced River<br>
+                    - Exploring alpine meadows or remote northern trails</p>
+                <p><strong>Note:</strong> Research permits and safety for outdoor adventures.</p>
+            </div>
+
+            <div class="plan-box active">
+                <h3>Helpful Tips</h3>
+                <ul>
+                    <li>Yosemite gets crowded in summer – book lodging and entrance early.</li>
+                    <li>Weather varies – bring layered clothing.</li>
+                    <li>Respect nature – pack out your trash.</li>
+                    <li>Check <a href="https://www.nps.gov/yose" target="_blank">Yosemite's official site</a> for trail closures & updates.</li>
+                </ul>
+            </div>
+        </section>
 
     </main>
 
@@ -60,5 +174,15 @@
         <p>&copy; 2025 Yosemite Road Trip Guide | <a href="references.html">References</a></p>
     </footer>
     <script src="scripts/script.js"></script>
+    <script>
+        function showPlan() {
+            const selected = document.getElementById("daySelect").value;
+            const plans = document.querySelectorAll(".plan-box");
+            plans.forEach(plan => plan.classList.remove("active"));
+            if (selected) {
+                document.getElementById("plan" + selected).classList.add("active");
+            }
+        }
+    </script>
 </body>
 </html>
