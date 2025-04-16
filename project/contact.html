@@ -4,48 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Yosemite Road Trip Guide</title>
-    <link rel="stylesheet" href="scripts/style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <header>
+        <div class="hero-image">
+            <img src="images/yosemite-banner.jpg" alt="Banner of Yosemite National Park">
+            <div class="hero-text">Contact Us</div>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="itineraries.html">Itineraries</a></li>
-                <li><a href="plan.html">Trip Planning</a></li>
-                <li><a href="references.html">References</a></li>
+                <li><a href="plantrip.html">Plan Your Trip</a></li>
+                <li><a href="safety.html">Safety Tips</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="references.html">References</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
         <h1>Contact Us</h1>
-        <p>If you have any questions, suggestions, or need help planning your Yosemite road trip, feel free to reach out!</p>
+        <p>If you have any questions, feedback, or collaboration ideas, feel free to reach out using the form below.</p>
 
         <form id="contactForm">
-            <label for="name">Your Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
+            <div class="form-group">
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" name="name" required>
+            </div>
 
-            <label for="email">Your Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
+            <div class="form-group">
+                <label for="email">Your Email:</label><br>
+                <input type="email" id="email" name="email" required>
+            </div>
 
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="5" required></textarea><br><br>
+            <div class="form-group">
+                <label for="reason">Contact Reason:</label><br>
+                <select id="reason" name="reason" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="error">Report an Error</option>
+                    <option value="technical">Website Issue</option>
+                    <option value="career">Career Opportunity</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
 
             <button type="submit">Send Message</button>
         </form>
     </main>
+
     <footer>
         <p>&copy; 2025 Yosemite Road Trip Guide | <a href="references.html">References</a></p>
     </footer>
+
     <script src="scripts/script.js"></script>
     <script>
-        // 绑定表单提交事件
         document.getElementById("contactForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // 防止默认提交
+            event.preventDefault();
             const name = document.getElementById("name").value;
-            showThankYouMessage(name); // 调用 script.js 中的函数
-            this.reset(); // 清空表单
+            showThankYouMessage(name);
+            this.reset();
         });
     </script>
 </body>
